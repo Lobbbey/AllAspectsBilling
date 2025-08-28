@@ -10,6 +10,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-sea-green: #3e885bff;
+  --color-tea-green: #c2f9bbff;
+  --color-uranian-blue: #a3cef1ff;
+  --color-air-superiority-blue: #6096baff;
+  --color-prussian-blue: #273043ff;
 }
 
 @media (prefers-color-scheme: dark) {
