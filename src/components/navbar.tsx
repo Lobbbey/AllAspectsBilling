@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import {FaXmark, FaBars} from 'react-icons/fa6';
 
@@ -8,33 +9,46 @@ export default function NavBar(){
   const [navOpen, setNavOpen] = useState(false);
   
   return(
-    <nav className="fixed top-0 left-0 w-full bg-white shadow-2xl z-50">
-      <div className="flex justify-between items-center h-16 px-6 text-black">
-        {/* Logo */}
-        <Link href="/">
-          <span className="text-xl text-prussian-blue">
-            All Aspects Billing
+    <header className="fixed top-0 left-0 w-full bg-white z-50">
+      <nav className="container mx-auto flex justify-between items-center px-6 py-2">
+        {/* Logo and Brand Name */}
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="../../public/globe.svg"
+            alt="All Aspects Billing LLC Logo"
+            width={50}
+            height={50}
+            className="h-12 w-12"
+          />
+          <span className="text-2xl font-bold text-prussian-blue drop-shadow-sm hidden sm:inline">
+            All Aspects Billing LLC
           </span>
         </Link>
 
-        {/* Desktop Nav */}
-        <ul>
-          <li><Link href="/#services">Services</Link></li>
-        </ul>
-
-        {/* Mobile Hamburger Icon */}
-        <div className="sm:hidden z-50" onClick={() => setNavOpen(!navOpen)}>
-          { navOpen ? <FaXmark size={24} /> : <FaBars size={24} />}
+        {/* Desktop Navigation Links */}
+        <div className="hidden lg:flex flex-col items-end">
+          <Link href="/consultation" className="bg-sea-green text-white font-bold tracking-wider uppercase px-6 py-3 rounded-r-full shadow-md hover:opacity-90 transition-opacity">
+            Schedule A Meeting
+          </Link>
+          <ul className="flex items-center gap-4 text-xs font-semibold tracking-wider uppercase mt-1">
+            <li>
+              <Link href="/#contact" className="bg-prussian-blue text-white px-3 py-1.5 rounded-md hover:bg-sea-green transition-colors">
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link href="/#services" className="text-prussian-blue hover:text-sea-green transition-colors">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/#about" className="text-prussian-blue hover:text-sea-green transition-colors">
+                About
+              </Link>
+            </li>
+          </ul>
         </div>
-
-        {/* Mobile Menu */}
-        {navOpen && (
-          <div className="sm:hidden absolute top-16 left-0 w-full flex flex-col items-center space-y-4 py-6 text-lg shadow-lg">
-
-          </div>
-        )}
-        
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
