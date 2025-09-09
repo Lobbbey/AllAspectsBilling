@@ -1,11 +1,11 @@
-import Services from "../components/services.tsx";
-import About from "../components/about.tsx";
+import Services from "@/components/services";
+import About from "@/components/about";
 
 export default function Home() {
   return (
-    <section className="">
-      <Services id="Services"/>
-      <About id="About"/>
+    <section>
+      <Services />
+      <About />
     </section>
   );
 }
