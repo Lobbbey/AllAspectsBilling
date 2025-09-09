@@ -30,9 +30,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased text-prussian-blue`}>
         < NavBar />
-        {children}
-        <Analytics />
+        <main className="pt-20">
+          {children}
+        </main>
         < Footer />
+        <Analytics />
       </body>
     </html>
   );

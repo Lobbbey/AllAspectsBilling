@@ -13,22 +13,22 @@ export default function NavBar(){
       <nav className="container mx-auto flex justify-between items-center px-6 py-2">
         {/* Logo and Brand Name */}
         <Link href="/" className="flex items-center gap-3">
-          {/* <Image */}
-          {/*   src="/logo.png" */}
-          {/*   alt="All Aspects Billing LLC Logo" */}
-          {/*   width={50} */}
-          {/*   height={50} */}
-          {/*   className="h-12 w-12" */}
-          {/* /> */}
+          <Image
+            src="../../public/globe.svg"
+            alt="All Aspects Billing LLC Logo"
+            width={50}
+            height={50}
+            className="h-12 w-12"
+          />
           <span className="text-2xl font-bold text-prussian-blue drop-shadow-sm hidden sm:inline">
             All Aspects Billing LLC
           </span>
         </Link>
-        
+
         {/* Desktop Navigation Links */}
-<div className="hidden lg:flex flex-col items-end">
+        <div className="hidden lg:flex flex-col items-end">
           <Link href="/consultation" className="bg-sea-green text-white font-bold tracking-wider uppercase px-6 py-3 rounded-r-full shadow-md hover:opacity-90 transition-opacity">
-            Request a Consultation
+            Schedule A Meeting
           </Link>
           <ul className="flex items-center gap-4 text-xs font-semibold tracking-wider uppercase mt-1">
             <li>
@@ -48,7 +48,6 @@ export default function NavBar(){
             </li>
           </ul>
         </div>
-
       </nav>
     </header>
   );
