@@ -9,7 +9,7 @@ export default function Services() {
         <h2 className="text-4xl text-left font-bold text-prussian-blue">Services We Offer</h2>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12">
           {service_list.map((service, index) => (
             // The Card
             <div 
