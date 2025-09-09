@@ -13,7 +13,7 @@ export default function NavBar(){
       {/* Green bar at the top */}
       <div className="h-2 bg-sea-green"></div>
 
-      <nav className="container mx-auto flex justify-between items-center px-6 py-3">
+      <nav className="container mx-auto flex justify-between items-center px-6 py-3 h-20">
         {/* Logo and Brand Name */}
         <Link href="/" className="flex items-center gap-3">
           <Image
@@ -23,12 +23,13 @@ export default function NavBar(){
             height={50}
             className="h-12 w-12"
           />
-          <span className="text-2xl font-bold text-prussian-blue drop-shadow-sm hidden sm:inline">
+          {/* Removed hidden class to make name visible on mobile */}
+          <span className="text-xl sm:text-2xl font-bold text-prussian-blue drop-shadow-sm">
             All Aspects Billing LLC
           </span>
         </Link>
 
-        {/* Desktop Navigation Links */}
+        {/* Desktop Navigation Links (unchanged) */}
         <div className="hidden lg:flex flex-col items-end">
           <Link 
             href="/consultation" 
@@ -54,7 +55,45 @@ export default function NavBar(){
             </li>
           </ul>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button 
+          onClick={() => setNavOpen(!navOpen)}
+          className="lg:hidden text-2xl text-prussian-blue z-50"
+        >
+          {navOpen ? <FaXmark /> : <FaBars />}
+        </button>
       </nav>
+
+      {/* Mobile Menu Panel - MODIFIED */}
+      <div className={`lg:hidden fixed top-20 left-0 w-full h-screen bg-white transition-transform duration-300 ease-in-out ${navOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+        <ul className="flex flex-col items-center justify-center h-full -mt-20 gap-8">
+            <li>
+              <Link 
+                href="/consultation" 
+                className="bg-sea-green text-white font-bold tracking-wider uppercase px-8 py-4 rounded-full shadow-md hover:opacity-90 transition-opacity"
+                onClick={() => setNavOpen(false)}
+              >
+                Schedule A Meeting
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="text-2xl text-prussian-blue hover:text-sea-green transition-colors" onClick={() => setNavOpen(false)}>
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link href="/#services" className="text-2xl text-prussian-blue hover:text-sea-green transition-colors" onClick={() => setNavOpen(false)}>
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/#about" className="text-2xl text-prussian-blue hover:text-sea-green transition-colors" onClick={() => setNavOpen(false)}>
+                About
+              </Link>
+            </li>
+        </ul>
+      </div>
     </header>
   );
 }
