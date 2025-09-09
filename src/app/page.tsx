@@ -3,7 +3,7 @@ import About from "@/components/about";
 
 export default function Home() {
   return (
-    <section>
+    <section className="flex flex-col gap-12">
       <Services />
       <About />
     </section>

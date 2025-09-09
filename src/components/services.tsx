@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-white">
+    <section id="services" className="bg-gray-100 py-24">
       <div className="container mx-auto px-4 text-center">
         {/* Section Titles */}
         <h2 className="text-4xl text-left font-bold text-prussian-blue">Services We Offer</h2>
@@ -14,7 +14,7 @@ export default function Services() {
             // The Card
             <div 
               key={index} 
-              className="border border-gray-200 rounded-lg p-6 flex flex-col items-center text-center shadow-sm hover:shadow-lg transition-shadow duration-300"
+              className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center text-center shadow-sm hover:shadow-lg transition-shadow duration-300"
             >
               {/* Icon */}
               <Image
