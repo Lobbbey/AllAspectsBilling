@@ -9,10 +9,10 @@ export default function Footer() {
         <div className="flex-shrink-0">
           <Link href="/" className="flex items-center gap-4">
             <Image
-              src="/logo.png" // Assumes logo.png is in the /public folder
+              src="/logo.png"  
               alt="All Aspects Billing LLC Logo"
-              width={80} // Adjust size as needed
-              height={80} // Adjust size as needed
+              width={200}
+              height={200} 
             />
           </Link>
         </div>
