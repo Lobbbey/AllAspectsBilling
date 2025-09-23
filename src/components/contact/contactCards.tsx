@@ -1,4 +1,4 @@
-import {contact_list} from "../../constant/contact_list.ts"
+import {contact_list} from "../../constant/contact_list"
 
 export default function ContactCard(){
   return(
