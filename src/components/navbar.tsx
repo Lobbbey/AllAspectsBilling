@@ -32,7 +32,7 @@ export default function NavBar(){
         {/* Desktop Navigation Links (unchanged) */}
         <div className="hidden lg:flex flex-col items-end">
           <Link 
-            href="/consultation" 
+            href="/contact" 
             className="bg-sea-green text-white font-bold tracking-wider uppercase px-8 py-3 rounded-full shadow-md hover:opacity-90 transition-opacity"
           >
             Schedule A Meeting

@@ -28,9 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased text-prussian-blue`}>
-        < NavBar />
-        <main className="pt-20 mb-12">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased text-prussian-blue flex flex-col min-h-screen`}>        < NavBar />
+        <main className="pt-20 mb-12 flex-grow">
           {children}
         </main>
         < Footer />
