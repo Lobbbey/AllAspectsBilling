@@ -16,6 +16,7 @@ export default function Services() {
               key={index} 
               className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center text-center shadow-sm hover:shadow-lg transition-shadow duration-300"
             >
+
               {/* Icon */}
               <Image
                 src={`/services/${service.icon}`}
