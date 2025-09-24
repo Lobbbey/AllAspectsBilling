@@ -19,7 +19,7 @@ export default function Services() {
 
               {/* Icon */}
               <Image
-                src={`/services/${service.icon}`}
+                src={`${service.icon}`}
                 alt={`${service.name} icon`}
                 width={64}
                 height={64}
