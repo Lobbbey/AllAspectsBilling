@@ -32,7 +32,8 @@ export const service_list = [
   {
     name: "Accounts Recievable", 
     desc: "Effectivly manage Accounts Receivable by tracking and collecting outstanding payments for healthcare services from both patients and insurance companies", 
-    icon: "/services/accounts-recievable.png"
+    icon: "/services/charge-entry.png" 
+    //icon: "/services/accounts-recievable.png"
   },
   {
     name: "Monthly Reporting", 

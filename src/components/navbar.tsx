@@ -17,19 +17,19 @@ export default function NavBar(){
         {/* Logo and Brand Name */}
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/logo.png" 
+            src="/Full-logo-black.png" 
             alt="All Aspects Billing LLC Logo"
             width={100}
             height={100}
-            className="h-20 w-25"
+            className="h-20 w-20"
           />
-          {/* Removed hidden class to make name visible on mobile */}
+
           <span className="text-xl sm:text-2xl font-bold text-prussian-blue drop-shadow-sm">
             All Aspects Billing LLC
           </span>
         </Link>
 
-        {/* Desktop Navigation Links (unchanged) */}
+        {/* Desktop Navigation Links*/}
         <div className="hidden lg:flex flex-col items-end">
           <Link 
             href="/contact" 
