@@ -26,9 +26,13 @@ export default function ContactCard(){
                   {contact.email}
                 </p>
 
+                {/* Phone Number  */}
+                <p className="text-sm text-gray-600 mt-2">
+                  {contact.phone}
+                </p>
+
               </div>
             ))}
-
           </div>
         </div>
     </section>
