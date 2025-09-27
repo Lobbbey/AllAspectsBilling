@@ -6,7 +6,13 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* 1. Top-Left Card (Image + Text) */}
           <div className="bg-white p-8 rounded-lg shadow-md flex flex-col md:flex-row items-center gap-8">
-            <div className="w-full md:w-1/3 h-48 bg-gray-300 rounded-lg flex-shrink-0"></div>
+            <div className="w-full md:w-1/3 h-48 rounded-lg flex-shrink-0 overflow-hidden">
+              <img
+                src="/about/notesSquare.png"
+                alt=""
+                className="object-cover w-full h-full rounded-lg"
+              />
+            </div>
             <div className="w-full md:w-2/3">
               <h3 className="text-2xl font-bold text-prussian-blue">
                 Background
@@ -22,12 +28,24 @@ export default function About() {
 
           {/* 2. Top-Right Card (Image Only) */}
           <div className="bg-white p-8 rounded-lg shadow-md flex items-center justify-center">
-            <div className="w-full h-48 bg-gray-300 rounded-lg"></div>
+            <div className="w-full h-48 rounded-lg overflow-hidden">
+              <img
+                src="/about/girlReading.png"
+                alt=""
+                className="object-cover w-full h-full rounded-lg"
+              />
+            </div>
           </div>
 
           {/* 3. Bottom-Left Card (Image Only) */}
           <div className="bg-white p-8 rounded-lg shadow-md flex items-center justify-center">
-            <div className="w-full h-48 bg-gray-300 rounded-lg"></div>
+            <div className="w-full h-48 rounded-lg overflow-hidden">
+              <img
+                src="/about/girlMath.png"
+                alt=""
+                className="object-cover w-full h-full rounded-lg"
+              />
+            </div>
           </div>
 
           {/* 4. Bottom-Right Card (Text + Image) */}
@@ -41,7 +59,13 @@ export default function About() {
                 chiropractic claim submission.
               </p>
             </div>
-            <div className="w-full md:w-1/3 h-48 bg-gray-300 rounded-lg flex-shrink-0"></div>
+            <div className="w-full md:w-1/3 h-48 rounded-lg flex-shrink-0 overflow-hidden">
+              <img
+                src="/about/calculationsRect.png"
+                alt=""
+                className="object-cover w-full h-full rounded-lg"
+              />
+            </div>
           </div>
         </div>
       </div>
